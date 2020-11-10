@@ -16,8 +16,8 @@ if (!isset($_SESSION["cart"])) {
   $cart=$_SESSION["cart"];
   $new=1;
   for($x = 0; $x < count($cart); $x++) {
-    if ($x[0][0]==$prod) {
-      $x[0][1]=$x[0][1]+1;
+    if ($cat[$x][0]==$prod) {
+      $cart[$x][1]=$cart[$x][1]+1;
       $new=0;
       break;
     }
