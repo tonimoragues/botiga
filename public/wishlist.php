@@ -12,7 +12,6 @@ $prod=$_GET["producte"];
 if (!isset($_SESSION["cart"])) {
   $cart[0]=$prod;
 } else {
-  echo count($cart);
   $cart=$_SESSION["cart"];
   $pos=count($cart);
   $cart[$pos]=$prod;
