@@ -14,7 +14,8 @@ if (!isset($_SESSION["cart"])) {
 } else {
   echo count($cart);
   $cart=$_SESSION["cart"] = $cart;
-  $cart[count($cart)]=$prod;
+  $pos=count($cart);
+  $cart[$pos]=$prod;
 }
 $_SESSION["cart"] = $cart;
 
