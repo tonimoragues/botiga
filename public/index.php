@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "admin";
-$password = "manacor";
-$dbname = "botiga";
+include '../config/db.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
