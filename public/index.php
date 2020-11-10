@@ -17,6 +17,7 @@ if ($conn->connect_error) {
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -34,7 +35,7 @@ if ($result->num_rows > 0) {
 
     <div class="col-sm-3">
       <img src="img/<?php echo $row["codi"]; ?>.jpg" alt="" class="img-fluid">
-      <h4 class="text-center"><?php echo $row["nom"]; ?></h4>
+      <h4 class="text-center my-2" style="font-family: 'Julius Sans One', sans-serif;"><?php echo $row["nom"]; ?></h4>
       <a href="fitxa.php?codi=<?php echo $row["codi"]; ?>" class="stretched-link"></a>
     </div>
 
