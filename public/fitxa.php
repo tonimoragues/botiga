@@ -1,3 +1,27 @@
+<?php
+$codi=$_GET['codi'];
+
+$servername = "localhost";
+$username = "admin";
+$password = "manacor";
+$dbname = "botiga";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT codi, nom, preu, descripcio FROM productes where codi=$codi";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$nom=$row["nom"];
+$preu=$row["preu"];
+$descripcio=$row["descripcio"];
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +37,10 @@
       <div class="col-sm-6"><img src="img/camiseta.jpg" alt="" class="img-fluid"></div>
       <div class="col-sm-6">
         <div class="row">
-          <div class="col-sm-11"><h2>NOM PRODUCTE</h2></div>
-          <div class="col-sm-11"><h4>40€</h4></div>
+          <div class="col-sm-11"><h2><?php echo $nom;?></h2></div>
+          <div class="col-sm-11"><h4><?php echo $preu;?></h4></div>
           <div class="col-sm-11"><button class="btn btn-primary">Afegir</button></div>
-          <div class="col-sm-11"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente qui aperiam exercitationem nam aliquid excepturi vitae doloremque quae placeat culpa, laboriosam error tempora sequi repellat voluptate aut. Nihil illo fugit, tempore nemo cumque praesentium. Laborum nisi nihil ratione at, consequatur magni, voluptatem, nostrum ad rerum quibusdam ducimus quia libero possimus.</p></div>
+          <div class="col-sm-11"><p><?php echo $descripcio;?></p></div>
         </div>
       </div>
     </div>
