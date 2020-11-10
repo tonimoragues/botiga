@@ -56,15 +56,27 @@ $_SESSION["cart"] = $cart;
   <tbody>
     <?php
     for($x = 0; $x < count($cart); $x++) {
+      $nom='camiseta';
+      $preu=20;
+      $quantitat=$cart[$x][1];
+      $total=0;
      ?>
     <tr>
-      <th scope="row"><?php echo $cart[$x][0];?></th>
-      <td>20</td>
-      <td><?php echo $cart[$x][1];?></td>
-      <td>20</td>
+      <th scope="row"><?php echo $nom; ?></th>
+      <td><?php echo $preu; ?></td>
+      <td><?php echo $quantitat; ?></td>
+      <td><?php echo $preu*$quantitat; ?></td>
     </tr>
   <?php } ?>
   </tbody>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col">TOTAL</th>
+      <th scope="col">200 €</th>
+    </tr>
+  </thead>
 </table>
     </div>
   </div>
