@@ -40,7 +40,7 @@ $conn->close();
         <div class="row">
           <div class="col-sm-11"><h2><?php echo $nom;?></h2></div>
           <div class="col-sm-11"><h4><?php echo $preu;?></h4></div>
-          <div class="col-sm-11"><button class="btn btn-primary">Afegir <i class="fas fa-user"></i></button></div>
+          <div class="col-sm-11"><button class="btn btn-primary">Afegir <i class="fal fa-shopping-cart"></i></button></div>
           <div class="col-sm-11"><p><?php echo $descripcio;?></p></div>
         </div>
       </div>
