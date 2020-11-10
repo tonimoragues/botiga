@@ -1,11 +1,36 @@
 <?php
 // Start the session
 session_start();
-// Set session variables
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
-echo "Session variables are set.";
+$prod=$_GET["producte"];
 ?>
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+// Set session variables
+if (!isset($_SESSION["cart"])) {
+  $linia=array($prod,1);
+  $cart[0]=$linia;
+} else {
+  $cart=$_SESSION["cart"];
+  $new=1;
+  for($x = 0; $x < count($cart); $x++) {
+    if ($cart[$x][0]==$prod) {
+      $cart[$x][1]=$cart[$x][1]+1;
+      $new=0;
+      break;
+    }
+  }
+  if ($new==1) {
+    $linia=array($prod,1);
+    $pos=count($cart);
+    $cart[$pos]=$linia;
+  }
+}
+$_SESSION["cart"] = $cart;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,12 +54,16 @@ echo "Session variables are set.";
     </tr>
   </thead>
   <tbody>
+    <?php
+    for($x = 0; $x < count($cart); $x++) {
+     ?>
     <tr>
-      <th scope="row">CAMISETA</th>
+      <th scope="row"><?php echo $cart[$x][0];?></th>
       <td>20</td>
-      <td>1</td>
+      <td><?php echo $cart[$x][1];?></td>
       <td>20</td>
     </tr>
+  <?php } ?>
   </tbody>
 </table>
     </div>
