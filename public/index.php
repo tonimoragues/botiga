@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-  <h1>hola mon</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="img/camiseta.jpg" alt="" class="img-fluid">
+      <h4 class="text-center">NOM PRODUCTE</h4>
+    </div>
+  </div>
+</div>
 </body>
 </html>
