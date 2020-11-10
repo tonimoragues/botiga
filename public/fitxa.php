@@ -34,7 +34,7 @@ $conn->close();
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-sm-6"><img src="img/camiseta.jpg" alt="" class="img-fluid"></div>
+      <div class="col-sm-6"><img src="img/<?php echo $codi;?>.jpg" alt="" class="img-fluid"></div>
       <div class="col-sm-6">
         <div class="row">
           <div class="col-sm-11"><h2><?php echo $nom;?></h2></div>
