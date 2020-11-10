@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
 
     <div class="col-sm-3">
       <img src="img/<?php echo $row["codi"]; ?>.jpg" alt="" class="img-fluid">
-      <h4 class="text-center" style="font-family: 'Julius Sans One', sans-serif;"><?php echo $row["nom"]; ?></h4>
+      <h4 class="text-center" ><?php echo $row["nom"]; ?></h4>
       <a href="fitxa.php?codi=<?php echo $row["codi"]; ?>" class="stretched-link"></a>
     </div>
 
