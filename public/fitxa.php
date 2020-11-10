@@ -32,7 +32,7 @@ $conn->close();
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-sm"><a href="index.php">Tornar</a></div>
+      <div class="col-sm"><a href="index.php">Tornar  <i class="fas fa-undo"></i></a></div>
     </div>
     <div class="row">
       <div class="col-sm-6"><img src="img/<?php echo $codi;?>.jpg" alt="" class="img-fluid"></div>
@@ -40,7 +40,7 @@ $conn->close();
         <div class="row">
           <div class="col-sm-11"><h2><?php echo $nom;?></h2></div>
           <div class="col-sm-11"><h4><?php echo $preu;?></h4></div>
-          <div class="col-sm-11"><button class="btn btn-primary">Afegir <i class="fal fa-shopping-cart"></i></button></div>
+          <div class="col-sm-11"><button class="btn btn-primary">Afegir   <i class="fas fa-shopping-cart"></i></button></div>
           <div class="col-sm-11"><p><?php echo $descripcio;?></p></div>
         </div>
       </div>
