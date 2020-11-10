@@ -10,10 +10,10 @@ $prod=$_GET["producte"];
 <?php
 // Set session variables
 if (!isset($_SESSION["cart"])) {
-  $cart[0]=$producte;
+  $cart[0]=$prod;
 } else {
   $cart=$_SESSION["cart"] = $cart;
-  $cart[count($cart)]=$producte;
+  $cart[count($cart)]=$prod;
 }
 $_SESSION["cart"] = $cart;
 
