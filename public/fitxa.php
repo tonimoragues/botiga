@@ -34,6 +34,9 @@ $conn->close();
 <body>
   <div class="container">
     <div class="row">
+      <div class="col-sm"><a href="index.php">Tornar</a></div>
+    </div>
+    <div class="row">
       <div class="col-sm-6"><img src="img/<?php echo $codi;?>.jpg" alt="" class="img-fluid"></div>
       <div class="col-sm-6">
         <div class="row">
