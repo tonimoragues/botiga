@@ -80,9 +80,9 @@ $_SESSION["cart"] = $cart;
 </table>
     </div>
   </div>
-  <div class="row justify-content-between">
+  <div class="row justify-content-between my-4">
     <div class="col-4">
-      <button type="button" class="btn btn-primary btn-block">SEGUIR COMPRANT</button>
+      <a href="index.php" class="btn btn-primary btn-block">SEGUIR COMPRANT</a>
     </div>
     <div class="col-4">
       <button type="button" class="btn btn-primary btn-block">PAGAR</button>
