@@ -62,7 +62,7 @@ $_SESSION["cart"] = $cart;
       $total=0;
      ?>
     <tr>
-      <th scope="row"><?php echo $nom; ?></th>
+      <td><img class="img-fluid w-25" src="img/<?php echo $prod; ?>.jpg" alt=""><?php echo $nom; ?></td>
       <td><?php echo $preu; ?></td>
       <td><?php echo $quantitat; ?></td>
       <td><?php echo $preu*$quantitat; ?></td>
