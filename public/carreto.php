@@ -95,7 +95,7 @@ $_SESSION["cart"] = $cart;
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col">TOTAL</th>
-      <th scope="col">200 €</th>
+      <th scope="col"><?php echo $total; ?> €</th>
     </tr>
   </thead>
 </table>
