@@ -7,9 +7,9 @@ $traduccions = array(
         "continuar" => "seguir comprando"
     ),
     "cat" => array(
-        "afegir" => "añadir",
+        "afegir" => "afegir",
         "pagar" => "pagar",
-        "continuar" => "seguir comprando"
+        "continuar" => "seguir comprant"
     )
   );
 
