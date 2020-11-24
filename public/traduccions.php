@@ -14,6 +14,6 @@ $traduccions = array(
     )
   );
 
-echo $traduccions[$lang]['afegir'].'</br>';
-echo $traduccions[$lang]['pagar'].'</br>';
-echo $traduccions[$lang]['continuar'].'</br>';
+//echo $traduccions[$lang]['afegir'].'</br>';
+//echo $traduccions[$lang]['pagar'].'</br>';
+//echo $traduccions[$lang]['continuar'].'</br>';

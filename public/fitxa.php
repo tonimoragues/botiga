@@ -1,4 +1,10 @@
 <?php
+if(!isset($_COOKIE['lang'])) {
+  setcookie('lang', 'es');
+  $lang='es';
+} else {
+  $lang=$_COOKIE['lang'];
+}
 $codi=$_GET['codi'];
 
 include '../config/db.php';
@@ -43,7 +49,7 @@ $conn->close();
         <div class="row">
           <div class="col-sm-11"><h2 style="font-family: 'Julius Sans One', sans-serif;"><?php echo $nom;?></h2></div>
           <div class="col-sm-11 my-2"><h4><?php echo $preu;?> €</h4></div>
-          <div class="col-sm-11"><a href="carreto.php?producte=<?php echo $codi;?>" class="btn btn-primary">Afegir<i class="fas fa-shopping-cart"></i></a></div>
+          <div class="col-sm-11"><a href="carreto.php?producte=<?php echo $codi;?>" class="btn btn-primary"><?php echo $traduccions[$lang]['afegir']; ?><i class="fas fa-shopping-cart"></i></a></div>
           <div class="col-sm-11 my-3"><p><?php echo $descripcio;?></p></div>
         </div>
       </div>
