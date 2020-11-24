@@ -6,10 +6,10 @@
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" <?php if ($lag=='cat') {echo 'active';} ?> href="changelang.php?lang=cat">CAT</a>
+    <li class="nav-item <?php if ($lag=='cat') {echo 'active';} ?>">
+      <a class="nav-link" href="changelang.php?lang=cat">CAT</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" <?php if ($lag=='es') {echo 'active';} ?>>
       <a class="nav-link" href="changelang.php?lang=es">ES</a>
     </li>
   </ul>
