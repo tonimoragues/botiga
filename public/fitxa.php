@@ -8,6 +8,7 @@ if(!isset($_COOKIE['lang'])) {
 $codi=$_GET['codi'];
 
 include '../config/db.php';
+include "traduccions.php"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
