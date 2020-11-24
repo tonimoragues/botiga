@@ -32,7 +32,7 @@ $conn->close();
   <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
 </head>
 <body style="font-family: 'Roboto', sans-serif;">
-  <php include "capsalera" ?>;
+  <?php include "capsalera"; ?>
   <div class="container">
     <div class="row">
       <div class="col-sm"><a href="index.php">Tornar  <i class="fas fa-undo"></i></a></div>
