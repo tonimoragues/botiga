@@ -41,6 +41,7 @@ $_SESSION["cart"] = $cart;
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+<?php include "capsalera.php"; ?>
 <div class="container">
   <div class="row">
     <div class="col-sm">
@@ -56,7 +57,18 @@ $_SESSION["cart"] = $cart;
   <tbody>
     <?php
     for($x = 0; $x < count($cart); $x++) {
-      $nom='camiseta';
+
+      //consulta que teni a la fitxa
+      $codi=$cart[$x][0];
+
+      $sql = "SELECT codi, nom, preu FROM productes where codi=$codi";
+      $result = $conn->query($sql);
+      $row = $result->fetch_assoc();
+      $nom=$row["nom"];
+      $preu=$row["preu"];
+      /////
+
+      $nom=$cart[$x][0];
       $preu=20;
       $quantitat=$cart[$x][1];
       $total=0;
