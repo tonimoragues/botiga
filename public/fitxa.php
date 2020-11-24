@@ -8,7 +8,7 @@ if(!isset($_COOKIE['lang'])) {
 $codi=$_GET['codi'];
 
 include '../config/db.php';
-include "traduccions.php"; 
+include "traduccions.php";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -42,7 +42,7 @@ $conn->close();
   <?php include "capsalera.php"; ?>
   <div class="container">
     <div class="row">
-      <div class="col-sm"><a href="index.php">Tornar  <i class="fas fa-undo"></i></a></div>
+      <div class="col-sm"><a href="index.php"><?php echo $traduccions[$lang]['afegir']; ?>  <i class="fas fa-undo"></i></a></div>
     </div>
     <div class="row">
       <div class="col-sm-6"><img src="img/<?php echo $codi;?>.jpg" alt="" class="img-fluid"></div>
