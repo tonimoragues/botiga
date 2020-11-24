@@ -20,6 +20,8 @@ if ($conn->connect_error) {
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
+  <?php include "capsalera.php"; ?>
+
 <div class="container">
   <div class="row">
 <?php

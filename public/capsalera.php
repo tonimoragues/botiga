@@ -7,10 +7,10 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link" href="#">CAT</a>
+      <a class="nav-link" href="changelang.php?lang=cat">CAT</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">ES</a>
+      <a class="nav-link" href="changelang.php?lang=es">ES</a>
     </li>
   </ul>
 </div>
