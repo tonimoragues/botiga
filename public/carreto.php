@@ -79,7 +79,7 @@ $_SESSION["cart"] = $cart;
       //$nom=$cart[$x][0];
       //$preu=20;
       $quantitat=$cart[$x][1];
-      $total=$total+$preu*$quantitat;
+      $total=$total+($preu*$quantitat);
 
      ?>
     <tr>

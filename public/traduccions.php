@@ -1,5 +1,6 @@
 <?php
 $lang=$_GET['lang'];
+
 $traduccions = array(
     "es" => array(
         "afegir" => "añadir",
