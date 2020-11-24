@@ -2,6 +2,15 @@
 // Start the session
 session_start();
 $prod=$_GET["producte"];
+
+include '../config/db.php';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,10 +75,8 @@ $_SESSION["cart"] = $cart;
       $row = $result->fetch_assoc();
       $nom=$row["nom"];
       $preu=$row["preu"];
-      /////
-
-      $nom=$cart[$x][0];
-      $preu=20;
+      //$nom=$cart[$x][0];
+      //$preu=20;
       $quantitat=$cart[$x][1];
       $total=0;
      ?>
