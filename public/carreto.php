@@ -65,6 +65,7 @@ $_SESSION["cart"] = $cart;
   </thead>
   <tbody>
     <?php
+    $total=0;
     for($x = 0; $x < count($cart); $x++) {
 
       //consulta que teni a la fitxa
@@ -78,7 +79,8 @@ $_SESSION["cart"] = $cart;
       //$nom=$cart[$x][0];
       //$preu=20;
       $quantitat=$cart[$x][1];
-      $total=0;
+      $total=$total+$preu*$quantitat;
+
      ?>
     <tr>
       <td><img class="img-fluid w-25 mr-4" src="img/<?php echo $codi; ?>.jpg" alt=""><?php echo $nom; ?></td>
