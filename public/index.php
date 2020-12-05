@@ -12,5 +12,5 @@ try {
     die($e->getMessage());
 }
 
-require('../views/index.php');
+require('../views/index.view.php');
 ?>
