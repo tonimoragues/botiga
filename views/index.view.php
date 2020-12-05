@@ -9,25 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php include "capsalera.php"; ?>
+
+<?php include "capsalera.view.php"; ?>
 
 <div class="container">
     <div class="row">
-        <?php
 
-        while($row = $result->fetch_assoc()) {
-
-            ?>
+        <?php foreach ($productes as $producte) { ?>
 
             <div class="col-sm-3">
-                <img src="img/<?php echo $row["codi"]; ?>.jpg" alt="" class="img-fluid">
-                <h4 class="text-center" style="font-family: 'Julius Sans One', sans-serif;"><?php echo $row["nom"]; ?></h4>
-                <a href="fitxa.php?codi=<?php echo $row["codi"]; ?>" class="stretched-link"></a>
+                <img src="img/<?= $producte->codi ?>.jpg" alt="" class="img-fluid">
+                <h4 class="text-center" style="font-family: 'Julius Sans One', sans-serif;"><?= $producte->nom ?></h4>
+                <a href="fitxa.php?codi=<?= $producte->codi ?> class="stretched-link"></a>
             </div>
 
-            <?php
-        }
-        ?>
+        <?php         }     ?>
 
     </div>
 </div>

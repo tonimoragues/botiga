@@ -50,7 +50,7 @@ $_SESSION["cart"] = $cart;
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-<?php include "capsalera.php"; ?>
+<?php include "capsalera.view.php"; ?>
 <div class="container">
   <div class="row">
     <div class="col-sm">
