@@ -1,3 +1,5 @@
 <?php
 
-var_dump($_SERVER);
+$uri=trim($_SERVER['REQUEST_URI'],'/');
+echo $uri;
+
