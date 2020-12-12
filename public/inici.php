@@ -1,20 +1,28 @@
 <?php
 
-$uri=trim($_SERVER['REQUEST_URI'],'/');
-$path=explode('/',$uri.'/',-1);
+$routes = array(
+    "productes"=>"ProductesController",
+    "productes/{codi}"=>"FitxaController",
+    "carreto"=>"CarretoController"
+);
 
-switch ($path[0]) {
-    case "productes":
-        if (array_key_exists(1,$path)) {
-            $codi=$path[1];
-            include 'fitxa.php';
+$uri=trim($_SERVER['REQUEST_URI'],'/');
+
+foreach($routes as $ruta => $accio) {
+    if (preg_match('/\{[a-z]+\}/', $ruta)) {
+        $pattern = "/". preg_replace("/\/\{[a-z]+\}/", "\/[0-9]+/", $ruta);
+        if (preg_match($pattern, $uri)) {
+            preg_match('/[0-9]+/', $uri, $matchesu);
+            preg_match('/\{[a-z]+\}/', $ruta, $matchesr);
+            $varname=trim(trim($matchesr[0],"{"),"}");
+            $$varname=$matchesu[0];
+            echo $accio;
         }
-        else {
-            include 'index.php';
-        }
-        break;
-    case "carreto":
-        include 'carreto.php';
-        break;
+    } elseif ($ruta == $uri ) {
+        echo $accio;
+    } else {
+        echo "la ruta no és vàlida";
+    }
 }
+
 
