@@ -10,8 +10,6 @@ include '../config/db.php';
 require('../classes/Producte.php');
 include "traduccions.php";
 
-$codi=$_GET['codi'];
-
 try {
   $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $stmt = $pdo->prepare("SELECT codi, nom, preu, descripcio FROM productes where codi=$codi");
