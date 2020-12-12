@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,9 +18,9 @@
         <?php foreach ($productes as $producte) { ?>
 
             <div class="col-sm-3">
-                <img src="img/<?= $producte->codi ?>.jpg" alt="" class="img-fluid">
+                <img src="/img/<?= $producte->codi ?>.jpg" alt="" class="img-fluid">
                 <h4 class="text-center" style="font-family: 'Julius Sans One', sans-serif;"><?= $producte->nom ?></h4>
-                <a href="fitxa.php?codi=<?= $producte->codi ?>" class="stretched-link"></a>
+                <a href="/fitxa.php?codi=<?= $producte->codi ?>" class="stretched-link"></a>
             </div>
 
         <?php         }     ?>

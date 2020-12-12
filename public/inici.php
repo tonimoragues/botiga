@@ -17,11 +17,11 @@ foreach($routes as $ruta => $accio) {
             $varname=trim(trim($matchesr[0],"{"),"}");
             $$varname=$matchesu[0];
             echo $accio;
+            break;
         }
-    } elseif ($ruta == $uri ) {
+    } elseif ($ruta == $uri) {
         echo $accio;
-    } else {
-        echo "la ruta no és vàlida";
+        break;
     }
 }
 
