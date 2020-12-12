@@ -25,8 +25,9 @@ foreach($routes as $ruta => $accio) {
     }
 }
 
-//require $controlador.".php";
-require ('../controllers/ProductesController.php');
-$controlador = new ProductesController();
-$controlador->index();
+require $controlador.".php";
+
+//require ('../controllers/ProductesController.php');
+//$controlador = new ProductesController();
+//$controlador->index();
 
