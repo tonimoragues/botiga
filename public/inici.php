@@ -1,9 +1,9 @@
 <?php
 
 $routes = array(
-    "productes"=>"ProductesController",
-    "productes/{codi}"=>"FitxaController",
-    "carreto"=>"CarretoController"
+    "productes"=>"index",
+    "productes/{codi}"=>"fitxa",
+    "carreto"=>"carreto"
 );
 
 $uri=trim($_SERVER['REQUEST_URI'],'/');
@@ -24,5 +24,7 @@ foreach($routes as $ruta => $accio) {
         break;
     }
 }
+
+require $accio.".php";
 
 
