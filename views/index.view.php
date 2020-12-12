@@ -20,7 +20,7 @@
             <div class="col-sm-3">
                 <img src="/img/<?= $producte->codi ?>.jpg" alt="" class="img-fluid">
                 <h4 class="text-center" style="font-family: 'Julius Sans One', sans-serif;"><?= $producte->nom ?></h4>
-                <a href="/fitxa.php?codi=<?= $producte->codi ?>" class="stretched-link"></a>
+                <a href="/productes/<?= $producte->codi ?>" class="stretched-link"></a>
             </div>
 
         <?php         }     ?>
