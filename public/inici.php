@@ -16,15 +16,15 @@ foreach($routes as $ruta => $accio) {
             preg_match('/\{[a-z]+\}/', $ruta, $matchesr);
             $varname=trim(trim($matchesr[0],"{"),"}");
             $$varname=$matchesu[0];
-            echo $accio;
+            $controlador=$accio;
             break;
         }
     } elseif ($ruta == $uri) {
-        echo $accio;
+        $controlador= $accio;
         break;
     }
 }
 
-require $accio.".php";
+require $controlador.".php";
 
 
