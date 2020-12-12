@@ -13,11 +13,10 @@ include "traduccions.php";
 try {
   $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $stmt = $pdo->prepare("SELECT codi, nom, preu, descripcio FROM productes where codi=$codi");
-  var_dump($codi);
-  die();
   $stmt->execute();
   $producte = $stmt->fetchAll(PDO::FETCH_CLASS, 'Producte');
-
+  var_dump($producte);
+  die();
 } catch (PDOException $e) {
   die($e->getMessage());
 }
