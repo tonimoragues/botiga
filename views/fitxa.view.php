@@ -14,7 +14,7 @@
 <?php include "capsalera.view.php"; ?>
 <div class="container">
     <div class="row">
-        <div class="col-sm"><a href="index.php"><?php echo $traduccions[$lang]['tornar']; ?>  <i class="fas fa-undo"></i></a></div>
+        <div class="col-sm"><a href="/productes"><?php echo $traduccions[$lang]['tornar']; ?>  <i class="fas fa-undo"></i></a></div>
     </div>
     <div class="row">
         <div class="col-sm-6"><img src="/img/<?= $producte->codi ?>.jpg" alt="" class="img-fluid"></div>
