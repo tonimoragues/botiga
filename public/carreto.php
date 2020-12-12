@@ -1,14 +1,6 @@
 <?php
-// Start the session
 session_start();
-$prod=$_GET["producte"];
+$cart=$_SESSION["cart"];
 
-include '../config/db.php';
+require('../views/carreto.view.php');
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-?>

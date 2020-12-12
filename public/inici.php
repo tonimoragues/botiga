@@ -3,7 +3,8 @@
 $routes = array(
     "productes"=>"index",
     "productes/{codi}"=>"fitxa",
-    "carreto"=>"carreto"
+    "carreto"=>"carreto",
+    "carreto/add/{prod}"=>"add-carreto"
 );
 
 $uri=trim($_SERVER['REQUEST_URI'],'/');
